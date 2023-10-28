@@ -1,4 +1,4 @@
-stage('Pull Github Repository'){
+stage('Pull GitHub Repository'){
     steps {
         git branch: 'main' , url: 'https://github.com/Shubhanshu1902/CalculatorApp.git'
     }
