@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        registry = 'shubhanshu1902/calculatorapp:tagname',
+        registry = 'shubhanshu1902/calculatorapp'
         registryCredential = 'dockerhubconnect'
         dockerImage = ''
     }
