@@ -1,5 +1,11 @@
 pipeline {
     agent any
+    environment {
+        registry = 'shubhanshu1902/calculatorapp',
+        registryCredential = 'dockerhubconnect'
+        dockerImage = ''
+    }
+
     stages{
         stage('Pull GitHub Repository') {
             steps {
@@ -11,6 +17,30 @@ pipeline {
         stage('Build Code using Maven') {
             steps {
                 sh 'mvn clean install'
+            }
+        }
+
+        stage('Creating Image using Docker') {
+            steps {
+                script {
+                    dockerImage = docker.build registry + ":latest"
+                }
+            }
+        }
+
+        stage('Pushing the Image to Docker Repository') {
+            steps {
+                script {
+                    docker.withRegistry('', registryCredential) {
+                        dockerImage.push()
+                    }
+                }
+            }
+        }
+
+        stage('Remove Docker Image from Local System to free space') {
+            steps {
+                sh 'docker rmi $registry:latest'
             }
         }
     }
