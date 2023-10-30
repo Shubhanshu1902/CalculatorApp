@@ -1,2 +1,2 @@
 [SlaveNodes]
-miniprojslave ansible_host=172.16.138.79
+miniprojslave ansible_host=172.17.0.1
