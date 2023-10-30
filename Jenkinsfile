@@ -46,8 +46,14 @@ pipeline {
 
         stage('Run ansible for deployment') {
             steps {
-                ansiblePlaybook colorized: true, installation: 'Ansible',
-                inventory: './inventory', playbook: './playbook.yml'
+                ansiblePlaybook becomeUser: null,
+                colorized: true,
+                credentialsId: 'localhost',
+                disableHostKeyChecking: true,
+                installation: 'Ansible',
+                inventory: 'Deployment/inventory',
+                playbook: 'Deployment/deploy.yml',
+                sudoUser: null
             }
         }
     }
