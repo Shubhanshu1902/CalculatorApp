@@ -1,6 +1,6 @@
 ---
 - name: Pull Docker Image and Deploy It
-  hosts: ansible_host
+  hosts: spemini
   vars:
         ansible_python_interpreter: /usr/bin/python3
   become: false
