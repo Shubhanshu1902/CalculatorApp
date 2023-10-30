@@ -1,2 +1,2 @@
 [SlaveNodes]
-miniprojslave ansible_host=172.17.0.1
+localhost ansible_user=shubhanshu1902
