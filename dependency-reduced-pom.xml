@@ -18,7 +18,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>calculator.Hello</mainClass>
+                  <mainClass>calculator.Main</mainClass>
                 </transformer>
               </transformers>
             </configuration>
