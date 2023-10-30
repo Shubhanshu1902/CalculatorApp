@@ -47,7 +47,7 @@ pipeline {
         stage('Run ansible for deployment') {
             steps {
                 ansiblePlaybook colorized: true, installation: 'Ansible',
-                inventory: './inventory', playbook: './playbook.yml'
+                inventory: 'inventory', playbook: 'playbook.yml'
             }
         }
     }
