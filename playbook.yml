@@ -2,8 +2,8 @@
 - name: Pull Docker Image and Deploy It
   hosts: localhost
   vars:
-          ansible_python_interpreter: /usr/bin/python3
-  become: yes
+        ansible_python_interpreter: /usr/bin/python3
+  become: true
   become_method: sudo
   tasks:
           - name: Ensure that Docker service is enabled
@@ -13,7 +13,7 @@
 
           - name: Pull the Docker Image
             docker_image:
-                    name: shubhanshu1902/calculatorapp
+                    name: shubhanshu1902/calculatorapp:latest
                     source: pull
 
           - name: Run the Container
