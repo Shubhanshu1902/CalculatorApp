@@ -43,5 +43,12 @@ pipeline {
                 sh 'docker rmi $registry:latest'
             }
         }
+
+        stage('Run ansible for deployment') {
+            steps {
+                ansiblePlaybook colorized: true, disableHostKeyChecking: true, installation: 'Ansible',
+                inventory: './inventory', playbook: 'playbook.yml'
+            }
+        }
     }
 }
