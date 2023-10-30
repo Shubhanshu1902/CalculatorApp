@@ -1,10 +1,9 @@
 ---
 - name: Pull Docker Image and Deploy It
-  hosts: spemini
+  hosts: localhost
   vars:
         ansible_python_interpreter: /usr/bin/python3
-  become: false
-  gather_facts: false
+  become: yes
   become_method: sudo
   tasks:
           - name: Ensure that Docker service is enabled

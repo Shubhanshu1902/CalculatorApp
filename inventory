@@ -1,2 +1,2 @@
 [SlaveNodes]
-spemini ansible_host = shubhanshu1902@172.16.133.255
+shubhanshu1902 ansible_host=172.16.133.255
