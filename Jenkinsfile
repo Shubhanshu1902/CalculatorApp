@@ -51,8 +51,8 @@ pipeline {
                 credentialsId: 'localhost',
                 disableHostKeyChecking: true,
                 installation: 'Ansible',
-                inventory: 'Deployment/inventory',
-                playbook: 'Deployment/deploy.yml',
+                inventory: 'inventory',
+                playbook: 'playbook.yml',
                 sudoUser: null
             }
         }
