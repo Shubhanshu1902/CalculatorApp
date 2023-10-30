@@ -54,6 +54,7 @@ pipeline {
                 inventory: 'inventory',
                 playbook: 'playbook.yml',
                 sudoUser: null
+                ansible_sudo_pass='raheja1907'
             }
         }
     }
