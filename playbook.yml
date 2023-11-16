@@ -15,4 +15,4 @@
                     source: pull
 
           - name: Run the Container
-            shell: docker create -it --name Calculator2 shubhanshu1902/calculatorapp
+            shell: docker create -it --name Calculator3 shubhanshu1902/calculatorapp
